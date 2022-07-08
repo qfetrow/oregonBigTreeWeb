@@ -1,0 +1,10 @@
+<div class="border border-gray-400 bg-white rounded  p-4 flex flex-col leading-normal">
+    <div class="flex items-center">
+        <fa-icon [icon] = "faFileLines" [ngStyle] = "setColor()"></fa-icon>
+        <div class="p-2">
+            <h1 class="text-l pb-1"> {{ measure.MeasurePrefix + " " + measure.MeasureNumber}} </h1>
+            <h1 class="text-sm"> {{ measure.MeasureSummary }} </h1>
+            <h1 class="text-xs"> {{measure.PrefixMeaning}} </h1>
+        </div>
+    </div>
+</div>
