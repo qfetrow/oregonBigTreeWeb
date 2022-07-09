@@ -6,3 +6,6 @@ This is a Web version of the App I developed earlier this year.  I'm using Angul
 
 The goal of both the app and the webpage is to connect Oregonians to their local legislators and allow citizens to make sense of Oregon's legislative systems.  I want to make it easy for people to track state legislature and get their voices heard by their representatives.
 
+# Functionalities
+
+Right now the website is barely functional, displaying only information about the 10 latest measures.  I'm hoping to work on this project daily for the next few weeks.
