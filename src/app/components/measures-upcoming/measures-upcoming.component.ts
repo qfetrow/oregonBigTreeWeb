@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Measure } from '../../Measure';
 import { UpcomingMeasuresService } from '../../services/upcoming-measures.service';
 
@@ -9,11 +9,12 @@ import { UpcomingMeasuresService } from '../../services/upcoming-measures.servic
 })
 export class MeasuresUpcomingComponent implements OnInit {
   
+  @Input() committeecode: string = "HRULES"
   measures: Measure[] = [];
   constructor(private measureService: UpcomingMeasuresService) { }
 
   ngOnInit(): void {
-    this.measureService.getMeasures().subscribe( (measuresInitial) => this.measures = measuresInitial.value);
+    this.measureService.getMeasures("any", this.committeecode).subscribe( (measuresInitial) => this.measures = measuresInitial.value);
   }
 
 }

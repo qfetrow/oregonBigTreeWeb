@@ -1,0 +1,23 @@
+<div class="md:flex justify-evenly p-4 sm:space-x-0 sm:space-y-2 md:space-y-0 md:space-x-2">
+    <div class="senate-committees border border-gray-400 bg-white rounded pb-4">
+        <div class="p-4 max-w-xs">
+            <h1 class="text-xl pb-2 text-senateColor"> Senate Committees </h1>
+            <app-committee-card *ngFor="let committee of senateCommittees" [committee]="committee">
+            </app-committee-card>
+        </div>
+    </div>
+    <div class="house-committees border border-gray-400 bg-white rounded pb-4">
+        <div class="p-4 max-w-xs ">
+            <h1 class="text-xl pb-2 text-houseColor"> House Committees </h1>
+            <app-committee-card *ngFor="let committee of houseCommittees" [committee]="committee">
+            </app-committee-card>
+        </div>
+    </div>
+    <div class="joint-committees border border-gray-400 bg-white rounded pb-4">
+        <div class="p-4 max-w-xs">
+            <h1 class="text-xl pb-2 text-jointColor"> Joint Committees </h1>
+            <app-committee-card *ngFor="let committee of jointCommittees" [committee]="committee">
+            </app-committee-card>
+        </div>
+    </div>
+</div>

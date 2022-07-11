@@ -8,7 +8,13 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        'houseColor': '#ac9cf4',
+        'jointColor': '#fccc94',
+        'senateColor': '#b4e4bc'
+      }
+    },
   },
   plugins: [],
 }

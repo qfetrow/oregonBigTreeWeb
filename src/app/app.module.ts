@@ -6,13 +6,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { MeasurecardComponent } from './components/measurecard/measurecard.component';
 import { MeasuresUpcomingComponent } from './components/measures-upcoming/measures-upcoming.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CommitteesComponent } from './components/committees/committees.component';
+import { CommitteeCardComponent } from './components/committee-card/committee-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MeasurecardComponent,
-    MeasuresUpcomingComponent
+    MeasuresUpcomingComponent,
+    CommitteesComponent,
+    CommitteeCardComponent,
   ],
   imports: [
     BrowserModule,
