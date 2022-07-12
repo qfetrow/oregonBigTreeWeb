@@ -8,4 +8,4 @@ The goal of both the app and the webpage is to connect Oregonians to their local
 
 # Functionalities
 
-Right now the website is barely functional, displaying only information about the 10 latest measures.  I'm hoping to work on this project daily for the next few weeks.
+Right now the website is limited.  It supports users selecting a committee and viewing measures that are currently in those committees.
