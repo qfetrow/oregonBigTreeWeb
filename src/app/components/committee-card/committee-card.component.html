@@ -1,1 +1,5 @@
-<button class="text-start hover:text-gray-500 pb-3 min-w-full"> {{ committee.CommitteeName }}</button>
+<div class="text-start hover:text-gray-500 pb-2 min-w-full">
+    <a routerLink="./{{ committee.CommitteeCode }}"> 
+        {{ committee.CommitteeName }}
+    </a>
+</div>

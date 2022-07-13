@@ -16,4 +16,10 @@ export class CommitteesGetService {
     let committeesObservable = this.http.get<CommitteeInitial>(this.OlegCommitteeURL)
     return committeesObservable
   }
+
+  committeeFromCode(committeecode: string): Observable<CommitteeInitial> {
+    let newURL = this.OlegCommitteeURL + "%20and%20CommitteeCode%20eq%20%27" + committeecode + "%27"
+    let committeeObservable = this.http.get<CommitteeInitial>(newURL)
+    return committeeObservable
+  }
 }

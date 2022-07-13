@@ -1,5 +1,8 @@
-<h1 class="text-3xl font-extralight pl-4 pt-8"> Upcoming Measures </h1>
-<div class="pl-4 pr-4">
+<div class="flex pt-4 pl-2">  
+    <button class="text-senateColor text-xl" (click)="goBack()">←</button>
+    <h1 *ngFor="let committee of committee" class="text-3xl font-extralight pl-2"> {{ committee.CommitteeName }} Measures</h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2">
     <app-measurecard *ngFor="let measure of measures" [measure]="measure" class="p-3">
     </app-measurecard>
 </div>

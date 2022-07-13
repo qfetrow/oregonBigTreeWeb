@@ -8,6 +8,7 @@ import { MeasuresUpcomingComponent } from './components/measures-upcoming/measur
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommitteesComponent } from './components/committees/committees.component';
 import { CommitteeCardComponent } from './components/committee-card/committee-card.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommitteeCardComponent } from './components/committee-card/committee-ca
   imports: [
     BrowserModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
