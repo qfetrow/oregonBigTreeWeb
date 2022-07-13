@@ -1,0 +1,35 @@
+<div *ngIf="measures?.length == 1; else noMeasure">
+    <div class="flex pt-4 pl-2">  
+        <button class="text-senateColor text-xl" (click)="goBack()">←</button>
+        <h1 class="text-3xl font-extralight pl-2"> {{ measures[0].MeasurePrefix }}{{measures[0].MeasureNumber}} Details</h1>
+    </div>
+    <div class="p-10 lg:pl-20 lg:pr-20">
+        <div class="border border-gray-400 bg-white rounded  p-4 flex flex-col leading-normal">
+            <div class="border max-h-80 border-gray-400 bg-white rounded  p-4 flex flex-col leading-normal overflow-scroll">
+                <div class="font-extralight text-gray-600" style="white-space: break-spaces;" [innerHtml]="measures[0].MeasureSummary"></div>
+            </div>
+            <div *ngIf="measureactions.length >= 1">
+                <app-timeline-bar [measureactions]="measureactions"></app-timeline-bar>
+            </div>
+            <div class="flex items-center">
+                <div class="p-2" >
+                    <h1 class="text-xs pt-1 text-gray-500"> {{ measures[0].CreatedDate | date }} </h1>
+                    <h1 class="text-xs text-gray-500"> {{measures[0].PrefixMeaning}} </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #noMeasure>
+    <div class="flex h-screen w-screen align-end justify-center items-center fixed">
+        <fa-icon [icon] = "faError" transform="grow-50"></fa-icon>
+        <div class="pl-20">
+            <div class="text-2xl font-extralight">
+                Error 404:
+            </div>
+            <div class="text-5xl font-extralight">
+                Measure not found
+            </div>
+        </div>
+    </div>
+</ng-template>

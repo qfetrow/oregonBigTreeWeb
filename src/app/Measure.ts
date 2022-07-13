@@ -20,3 +20,13 @@ export interface Measure {
     ModifiedDate: string;
     PrefixMeaning: string;
 }
+
+export interface DocumentInitial {
+    value: [DocumentData]
+}
+
+export interface DocumentData {
+    SessionKey: String
+    MeasureNumber: Number
+    DocumentUrl: String
+}

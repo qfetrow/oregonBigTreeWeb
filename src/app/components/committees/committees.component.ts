@@ -19,12 +19,10 @@ export class CommitteesComponent implements OnInit {
   ngOnInit(): void {
       this.committeeService.getCommittees().subscribe( (committeesInitial) => {
         for (let i = 0; i < committeesInitial.value.length; i++) {
-          console.log("Initial read")
           let committee = committeesInitial.value[i];
           switch(committee.HouseOfAction) {
             case "H":
               // House committee
-              console.log(committee.CommitteeName)
               this.houseCommittees.push(committee);
               break;
             case "S":

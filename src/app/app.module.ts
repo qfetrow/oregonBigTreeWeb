@@ -9,6 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommitteesComponent } from './components/committees/committees.component';
 import { CommitteeCardComponent } from './components/committee-card/committee-card.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MeasureDetailComponent } from './components/measure-detail/measure-detail.component';
+import { TimelineBarComponent } from './components/timeline-bar/timeline-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     MeasuresUpcomingComponent,
     CommitteesComponent,
     CommitteeCardComponent,
+    MeasureDetailComponent,
+    TimelineBarComponent,
   ],
   imports: [
     BrowserModule,

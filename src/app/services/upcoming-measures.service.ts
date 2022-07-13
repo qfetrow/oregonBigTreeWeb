@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Measure, MeasureInitial } from '../Measure';
+import { DocumentData, DocumentInitial, Measure, MeasureInitial } from '../Measure';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of} from 'rxjs';
 
@@ -7,9 +7,6 @@ import { Observable, of} from 'rxjs';
   providedIn: 'root'
 })
 export class UpcomingMeasuresService {
-
-  // For now we're only getting the ten latest measures
-  private olegMeasureUrl = "https://api.oregonlegislature.gov/odata/odataservice.svc/Measures?$format=json&$orderby=CreatedDate%20desc&$top=10"
 
   constructor(private http: HttpClient) { }
   
@@ -20,10 +17,12 @@ export class UpcomingMeasuresService {
     var measurefilter: string = "";
     var mprefixfilter: string = "";
     var and = "%20and%20";
-    var sessfilter = "$filter=SessionKey%20eq%20%272022R1%27";
-    if ((sesskey = "any" )) {
+    var sessfilter = "";
+    if ((sesskey == "any" )) {
       sessfilter = "$filter="
       and = ""
+    } else if (sesskey != "") {
+      sessfilter = "$filter=SessionKey%20eq%20%27"+sesskey+"%27"
     }
     if (!(committeecode == "")) {
       commfilter = and + "CurrentCommitteeCode%20eq%20%27" + committeecode + "%27"
@@ -37,9 +36,19 @@ export class UpcomingMeasuresService {
       mprefixfilter = and + "MeasurePrefix%20eq%20%27" + measureprefix + "%27"
     }  
     let frankensteinURL = "https://api.oregonlegislature.gov/odata/odataservice.svc/Measures?$format=json&" + sessfilter + commfilter + measurefilter + mprefixfilter + "&$orderby=CreatedDate%20desc";
-    console.log(frankensteinURL);
-    this.olegMeasureUrl = frankensteinURL;
-    let initalMeasures = this.http.get<MeasureInitial>(this.olegMeasureUrl);
+    let initalMeasures = this.http.get<MeasureInitial>(frankensteinURL);
     return initalMeasures;
+  }
+
+  getDocument(sesskey: string, measureprefix: string, measurenumber: string) {
+    let header = "https://api.oregonlegislature.gov/odata/odataservice.svc/MeasureDocuments?$format=json&"
+    let sessfilter = "$filter=SessionKey%20eq%20%27"+sesskey+"%27"
+    let and = "%20and%20"
+    let measurefilter = "MeasureNumber%20eq%20" + measurenumber
+    let mprefixfilter = "MeasurePrefix%20eq%20%27" + measureprefix + "%27"
+    let frankenstein = header+sessfilter+and+measurefilter+and+mprefixfilter
+    console.log("Checking out: "+frankenstein)
+    let initialMeasureActions = this.http.get<DocumentInitial>(frankenstein);
+    return initialMeasureActions
   }
 }

@@ -1,0 +1,22 @@
+<div class="grid grid-cols-4 pt-3 gap-3">
+    <div class="border border-gray-400 bg-white rounded  p-4">
+        <div *ngIf="first">
+            First Passed!
+        </div>
+    </div>
+    <div class="border border-gray-400 bg-white rounded  p-4">
+        <div *ngIf="second">
+            Second Passed!
+        </div>
+    </div>
+    <div class="border border-gray-400 bg-white rounded  p-4">
+        <div *ngIf="third == 'pass'">
+            Third Passed!
+        </div>
+    </div>
+    <div class="border border-gray-400 bg-white rounded  p-4"> 
+        <div *ngIf="signed">
+            Signed!
+        </div>
+    </div>
+</div>
