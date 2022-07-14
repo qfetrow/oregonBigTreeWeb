@@ -11,6 +11,10 @@ import { CommitteeCardComponent } from './components/committee-card/committee-ca
 import { AppRoutingModule } from './app-routing.module';
 import { MeasureDetailComponent } from './components/measure-detail/measure-detail.component';
 import { TimelineBarComponent } from './components/timeline-bar/timeline-bar.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,21 @@ import { TimelineBarComponent } from './components/timeline-bar/timeline-bar.com
     CommitteeCardComponent,
     MeasureDetailComponent,
     TimelineBarComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule,
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+    MatNativeDateModule  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
