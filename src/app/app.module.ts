@@ -11,10 +11,12 @@ import { CommitteeCardComponent } from './components/committee-card/committee-ca
 import { AppRoutingModule } from './app-routing.module';
 import { MeasureDetailComponent } from './components/measure-detail/measure-detail.component';
 import { TimelineBarComponent } from './components/timeline-bar/timeline-bar.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
+import { HomeComponent } from './components/home/home.component';
+import { MeetinglistComponent } from './components/meetinglist/meetinglist.component';
+import { MeetingcardComponent } from './components/meetinglist/meetingcard/meetingcard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {MatCardModule} from '@angular/material/card';
     CommitteeCardComponent,
     MeasureDetailComponent,
     TimelineBarComponent,
-    CalendarComponent,
+    HomeComponent,
+    MeetinglistComponent,
+    MeetingcardComponent,
   ],
   imports: [
     BrowserModule,

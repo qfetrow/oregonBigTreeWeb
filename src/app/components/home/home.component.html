@@ -1,0 +1,13 @@
+<div class="grid grid-cols-3 gap-4 align-middle items-center">
+    <mat-card class="p-20">
+        <mat-calendar [(selected)]="selected" (selectedChange)="updateComp()"></mat-calendar>
+    </mat-card>
+
+    <div class = "meetings">
+        <div class="text-2xl text-houseColor font-extralight p-4"> Committee Meetings</div>
+        <div *ngFor="let date of selectedarr" class="border border-gray-400 bg-white rounded  p-4 max-h-96 min-h-full overflow-scroll">
+            <app-meetinglist [selecteddate]="date">
+            </app-meetinglist>
+        </div>
+    </div>
+</div>
