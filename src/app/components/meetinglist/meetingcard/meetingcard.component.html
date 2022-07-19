@@ -1,16 +1,16 @@
-<div class="border border-gray-100 rounded p-2">
+<div class="border border-gray-100 border-b-gray-300 rounded p-2">
     <a routerLink="./home">
         <div class="fun">
-            <p class="font-extralight"> {{ toTime(meeting.MeetingDate) }} </p>
+            <p class="font-extralight text-gray-500"> {{ toTime(meeting.MeetingDate) }} </p>
             <div></div>
             <div *ngIf="committee.length >= 1; else justcode">
-                <p class="font-extralight">{{ committee[0].CommitteeName }}</p>
+                <p class="font-extralight" [ngStyle]="setColor()">{{ committee[0].CommitteeName }}</p>
             </div>
         </div>
     </a>
 </div>
 <ng-template #justcode>
-    <p class="font-extralight">
+    <p class="font-extralight" [ngStyle]="setColor()" >
         {{ meeting.CommitteeCode }}
     </p>
 </ng-template>

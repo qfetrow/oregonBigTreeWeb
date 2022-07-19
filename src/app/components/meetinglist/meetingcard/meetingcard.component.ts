@@ -29,4 +29,20 @@ export class MeetingcardComponent implements OnInit {
     let hour = parseInt(hourminutesec[0]) % 12
     return hour + ":" + hourminutesec[1] + ampm
   }
+  setColor() {
+    var color = '#e3b885'
+    if (this.meeting.CommitteeCode[0] == "E" || this.meeting.CommitteeCode.includes("HEC") || this.meeting.CommitteeCode.includes("SEC")) {
+      // Emergency Committees are red
+      color = '#ff8585'
+    } 
+    else if (this.meeting.CommitteeCode[0] == "H") {
+      color = '#9b8cdc'
+    } else if (this.meeting.CommitteeCode[0] == "S") {
+      color = '#90b696'
+    } 
+    let styles = {
+      'color': color,
+    }
+    return styles
+  }
 }

@@ -17,6 +17,8 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { MeetinglistComponent } from './components/meetinglist/meetinglist.component';
 import { MeetingcardComponent } from './components/meetinglist/meetingcard/meetingcard.component';
+import { CommitteesidebarComponent } from './components/committeesidebar/committeesidebar.component';
+import { CsmeetingcardComponent } from './components/committeesidebar/csmeetingcard/csmeetingcard.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MeetingcardComponent } from './components/meetinglist/meetingcard/meeti
     HomeComponent,
     MeetinglistComponent,
     MeetingcardComponent,
+    CommitteesidebarComponent,
+    CsmeetingcardComponent,
   ],
   imports: [
     BrowserModule,

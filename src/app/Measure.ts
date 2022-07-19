@@ -26,7 +26,7 @@ export interface DocumentInitial {
 }
 
 export interface DocumentData {
-    SessionKey: String
+    SessionKey: string
     MeasureNumber: Number
-    DocumentUrl: String
+    DocumentUrl: string
 }

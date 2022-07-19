@@ -1,0 +1,15 @@
+<div class="border border-gray-100 border-b-gray-300 rounded p-2">
+    <a href="{{meetingurl}}">
+        <div class="grid grid-cols-3 items-start">
+            <p class="font-extralight"> 
+                {{ meeting.MeetingDate | date : "MMMM d, YYYY" }} 
+            </p>
+            <p class="font-extralight text-gray-700">
+                {{ meeting.Location }}
+            </p>
+            <p class="font-extralight text-gray-500">
+                 {{ toTime(meeting.MeetingDate)}}
+            </p>
+        </div>
+    </a>
+</div>

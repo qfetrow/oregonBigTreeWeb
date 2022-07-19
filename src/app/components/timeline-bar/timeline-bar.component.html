@@ -1,7 +1,10 @@
 <div class="grid grid-cols-4 pt-1 gap-3">
     <div class="First">
-        <h1 class="text-xs font-extralight"> First Reading </h1>
-        <div *ngIf="first">
+        <div class="flex gap-1">
+            <h1 class="text-xs font-extralight"> First Reading  </h1>
+            <h1 *ngIf ="first" class="text-xs">  - {{ fday | date }}</h1>
+        </div>
+        <div *ngIf="first" >
             <div class="border border-gray-400 bg-senateColor rounded p-4">
             </div>
         </div>
@@ -11,7 +14,10 @@
         </div>
     </div>
     <div class="Second">
-        <h1 class="text-xs font-extralight"> Second Reading</h1>
+        <div class="flex gap-1">
+            <h1 class="text-xs font-extralight"> Second Reading  </h1>
+            <h1 *ngIf ="second" class="text-xs">- {{ sday | date }}</h1>
+        </div>
         <div *ngIf="second">
             <div class="border border-gray-400 bg-senateColor rounded  p-4">
             </div>
@@ -22,7 +28,10 @@
         </div>
     </div>
     <div class="Third">
-        <h1 class="text-xs font-extralight">Third Reading</h1>
+        <div class="flex gap-1">
+            <h1 class="text-xs font-extralight"> Third Reading  </h1>
+            <h1 *ngIf ="third != 'not'" class="text-xs">- {{ thday | date }}</h1>
+        </div>
         <div *ngIf="third=='pass'">
             <div class="border border-gray-400 bg-senateColor rounded  p-4">
             </div>
@@ -37,7 +46,10 @@
         </div>
     </div>
     <div class="Signed">
-        <h1 class="text-xs font-extralight">Signed by Governor</h1>
+        <div class="flex gap-1">
+            <h1 class="text-xs font-extralight"> Signed by Governor  </h1>
+            <h1 *ngIf ="signed" class="text-xs">- {{ signday | date }}</h1>
+        </div>
         <div *ngIf="signed">
             <div class="border border-gray-400 bg-senateColor rounded  p-4">
             </div>

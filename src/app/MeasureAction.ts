@@ -4,10 +4,10 @@ export interface MeasureActionInitial {
 }
 
 export interface MeasureAction {
-    SessionKey: String
+    SessionKey: string
     MeasureNumber: Number
-    Chamber: String
-    ActionDate: String
-    ActionText: String
-    VoteText?: String
+    Chamber: string
+    ActionDate: string
+    ActionText: string
+    VoteText?: string
 }

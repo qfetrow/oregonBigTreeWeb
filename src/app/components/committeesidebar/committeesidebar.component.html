@@ -1,0 +1,8 @@
+<div>
+    <h1 class="font-extralight text-xl text-center p-3"> Upcoming {{ committee.CommitteeName }} Meetings </h1>
+    <div class="border border-gray-200 border-b-gray-300 rounded p-2 max-h-96 overflow-scroll">
+        <div *ngFor="let meeting of meetings" class="p-2">
+            <app-csmeetingcard [meeting]="meeting"></app-csmeetingcard>
+        </div>
+    </div>
+</div>
