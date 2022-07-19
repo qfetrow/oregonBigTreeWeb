@@ -8,4 +8,4 @@ The goal of both the app and the webpage is to connect Oregonians to their local
 
 # Functionalities
 
-Right now the website is limited.  It supports users selecting a committee and viewing measures that are currently in those committees.
+Right now the website is limited.  It supports users selecting a committee and viewing measures that are currently in those committees, as well as committee meetings.  There is a really ugly home page where I'm testing an interface in which users can select a date and it will show all meetings and floor agenda items on that date.
