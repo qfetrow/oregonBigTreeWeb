@@ -25,4 +25,22 @@ export class MeetingsService {
     let initialMeetings = this.http.get<MeetingInitial>(OlegUrl)
     return initialMeetings
   }
+  getMeeting(meetingdate: string, comcode: string) {
+    // Takes date in string form YYYY-MM-DDTHH:mm:ss
+    var OlegUrl = "https://api.oregonlegislature.gov/odata/odataservice.svc/CommitteeMeetings?$format=json&$filter=MeetingDate%20eq%20DateTime%27" + meetingdate +"%27" 
+    OlegUrl += "%20and%20CommitteeCode%20eq%20%27" + comcode + "%27"
+    console.log(OlegUrl)
+    let initialMeeting = this.http.get<MeetingInitial>(OlegUrl)
+    return initialMeeting
+  }
+
+  getAgendaItems(meetingdate: string, comcode: string) {
+    // Takes date in string form YYYY-MM-DDTHH:mm:ss
+    var OlegUrl = "https://api.oregonlegislature.gov/odata/odataservice.svc/CommitteeAgendaItems?$format=json&$filter=MeetingDate%20eq%20DateTime%27" + meetingdate +"%27" 
+    // 'CommitteCode' typo because they dgaf 
+    OlegUrl += "%20and%20CommitteCode%20eq%20%27" + comcode + "%27"
+    console.log(OlegUrl)
+    let initialMeeting = this.http.get<CommitteeAgendaItemInitial>(OlegUrl)
+    return initialMeeting 
+  }
 }

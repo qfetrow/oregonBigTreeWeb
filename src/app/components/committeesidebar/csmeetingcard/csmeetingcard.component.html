@@ -1,5 +1,5 @@
 <div class="border border-gray-100 border-b-gray-300 rounded p-2">
-    <a href="{{meetingurl}}">
+    <a routerLink="/meetings/{{ meeting.CommitteeCode }}/{{meeting.MeetingDate}}">
         <div class="grid grid-cols-3 items-start">
             <p class="font-extralight"> 
                 {{ meeting.MeetingDate | date : "MMMM d, YYYY" }} 

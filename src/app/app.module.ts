@@ -19,6 +19,7 @@ import { MeetinglistComponent } from './components/meetinglist/meetinglist.compo
 import { MeetingcardComponent } from './components/meetinglist/meetingcard/meetingcard.component';
 import { CommitteesidebarComponent } from './components/committeesidebar/committeesidebar.component';
 import { CsmeetingcardComponent } from './components/committeesidebar/csmeetingcard/csmeetingcard.component';
+import { MeetingdetailComponent } from './components/meetingdetail/meetingdetail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CsmeetingcardComponent } from './components/committeesidebar/csmeetingc
     MeetingcardComponent,
     CommitteesidebarComponent,
     CsmeetingcardComponent,
+    MeetingdetailComponent,
   ],
   imports: [
     BrowserModule,
