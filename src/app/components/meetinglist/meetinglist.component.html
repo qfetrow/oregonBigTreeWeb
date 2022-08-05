@@ -1,5 +1,5 @@
-<div class="grid grid-cols-1 gap-4 overflow-scroll">
-    <div *ngFor="let meeting of meetings">
+<div class="overflow-scroll justify-center">
+    <div *ngFor="let meeting of meetings" class="min-w-full p-2">
         <app-meetingcard [meeting]="meeting"></app-meetingcard>
     </div>
 </div>

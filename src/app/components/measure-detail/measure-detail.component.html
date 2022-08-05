@@ -1,9 +1,9 @@
 <div *ngIf="measures?.length == 1; else noMeasure">
-    <div class="flex pt-4 pl-2">  
+    <div class="flex p-2">  
         <button class="text-senateColor text-xl" (click)="goBack()">←</button>
-        <h1 class="text-3xl font-extralight pl-2"> {{ measures[0].MeasurePrefix }}{{measures[0].MeasureNumber}} Details</h1>
+        <h1 class="text-2xl text-center font-extralight pl-2"> {{ measures[0].MeasurePrefix }}{{measures[0].MeasureNumber}} Details</h1>
     </div>
-    <div class="p-10 lg:pl-20 lg:pr-20">
+    <div class="p-5 lg:pl-10 lg:pr-10">
         <div class="border border-gray-400 bg-white rounded  p-4 flex flex-col leading-normal">
             <div class="pb-4" *ngIf="measureactions.length >= 1">
                 <app-timeline-bar [measureactions]="measureactions"></app-timeline-bar>

@@ -1,4 +1,5 @@
 export interface Committee {
+    "SessionKey": string;
     "CommitteeCode": string;
     "CommitteeName": string;
     "HouseOfAction": string;
